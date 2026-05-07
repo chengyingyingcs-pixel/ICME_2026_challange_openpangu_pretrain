@@ -1,0 +1,32 @@
+# Model checkpoints (large binary files)
+checkpoints/
+
+# Training logs
+logs/
+
+# Model weights
+pangu_hif8_pretrain/models/
+
+# Datasets
+HiFloat8/datasets/
+
+# Eval sample files (large jsonl)
+evaluate_benchmarks/results/*/
+evaluate_benchmarks/results/**/*.jsonl
+evaluate_benchmarks/results/**/*.json
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.bak
+
+# Compiled binaries
+*.so
+
+# Runtime output
+nohup.out
+*.egg-info/
+.eggs/
+dist/
+build/

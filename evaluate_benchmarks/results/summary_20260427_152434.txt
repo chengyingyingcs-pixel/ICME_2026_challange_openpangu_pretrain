@@ -1,0 +1,21 @@
+Evaluation Summary  (2026-04-27 15:24:34)
+
+================================================================
+Task                              bf16     dts_exp  vs bf16 drop
+----------------------------------------------------------------
+MMLU          (5-shot)           26.63%       25.72%      3.3966% x
+GSM8K         (5-shot)            0.38%        0.68%    -80.0000%  
+MATH500       (4-shot)            0.38%        0.36%      5.2632% x
+HellaSwag    (10-shot)           36.47%       36.68%     -0.5735%  
+ARC-Easy     (25-shot)           42.51%       41.41%      2.5743% x
+ARC-Challenge(25-shot)           33.53%       32.51%      3.0534% x
+================================================================
+
+-- Average accuracy drop vs bf16 baseline --
+  dts_exp     : avg drop = -11.0477%  [PASS < 1.0%]
+
+[!] Tasks exceeding 1.0% accuracy loss threshold:
+    dts_exp / mmlu: 3.3966%
+    dts_exp / minerva_math: 5.2632%
+    dts_exp / arc_easy: 2.5743%
+    dts_exp / arc_challenge: 3.0534%

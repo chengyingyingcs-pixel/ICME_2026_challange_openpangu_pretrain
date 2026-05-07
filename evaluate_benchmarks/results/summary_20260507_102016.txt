@@ -1,0 +1,41 @@
+Evaluation Summary  (2026-05-07 10:20:16)
+
+==============================================================================================================================================
+Task                        bf16_lr1e5max_quant_lr1e5        bf16         cts   max_quantvs bf16_lr1e5 dropvs bf16_lr1e5 dropvs bf16_lr1e5 dropvs bf16_lr1e5 drop
+----------------------------------------------------------------------------------------------------------------------------------------------
+MMLU          (5-shot)           43.36%       43.17%       26.66%       26.13%       26.73%      0.4271%       38.5184% x     39.7339% x     38.3541% x
+GSM8K         (5-shot)            1.59%        1.29%        0.38%        0.45%        0.38%     19.0476% x     76.1905% x     71.4286% x     76.1905% x
+MATH500       (4-shot)            0.50%        0.46%        0.42%        0.38%        0.38%      8.0000% x     16.0000% x     24.0000% x     24.0000% x
+HellaSwag    (10-shot)           41.10%       40.86%       36.50%       36.74%       36.76%      0.5815%       11.1946% x     10.6130% x     10.5646% x
+ARC-Easy     (25-shot)           51.56%       51.01%       42.51%       41.46%       41.33%      1.0612% x     17.5510% x     19.5918% x     19.8367% x
+ARC-Challenge(25-shot)           36.77%       36.69%       33.62%       32.59%       32.51%      0.2320%        8.5847% x     11.3689% x     11.6009% x
+==============================================================================================================================================
+
+-- Average accuracy drop vs bf16 baseline --
+  max_quant_lr1e5: avg drop = 4.8916%  [FAIL < 1.0%]
+  bf16        : avg drop = 28.0065%  [FAIL < 1.0%]
+  cts         : avg drop = 29.4560%  [FAIL < 1.0%]
+  max_quant   : avg drop = 30.0911%  [FAIL < 1.0%]
+
+[!] Tasks exceeding 1.0% accuracy loss threshold:
+    bf16 / mmlu: 38.5184%
+    cts / mmlu: 39.7339%
+    max_quant / mmlu: 38.3541%
+    max_quant_lr1e5 / gsm8k: 19.0476%
+    bf16 / gsm8k: 76.1905%
+    cts / gsm8k: 71.4286%
+    max_quant / gsm8k: 76.1905%
+    max_quant_lr1e5 / minerva_math: 8.0000%
+    bf16 / minerva_math: 16.0000%
+    cts / minerva_math: 24.0000%
+    max_quant / minerva_math: 24.0000%
+    bf16 / hellaswag: 11.1946%
+    cts / hellaswag: 10.6130%
+    max_quant / hellaswag: 10.5646%
+    max_quant_lr1e5 / arc_easy: 1.0612%
+    bf16 / arc_easy: 17.5510%
+    cts / arc_easy: 19.5918%
+    max_quant / arc_easy: 19.8367%
+    bf16 / arc_challenge: 8.5847%
+    cts / arc_challenge: 11.3689%
+    max_quant / arc_challenge: 11.6009%

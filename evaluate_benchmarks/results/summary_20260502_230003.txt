@@ -1,0 +1,21 @@
+Evaluation Summary  (2026-05-02 23:00:03)
+
+================================================================
+Task                              bf16         cts  vs bf16 drop
+----------------------------------------------------------------
+MMLU          (5-shot)           26.66%       26.13%      1.9770% x
+GSM8K         (5-shot)            0.38%        0.45%    -20.0000%  
+MATH500       (4-shot)            0.42%        0.38%      9.5238% x
+HellaSwag    (10-shot)           36.50%       36.74%     -0.6548%  
+ARC-Easy     (25-shot)           42.51%       41.46%      2.4752% x
+ARC-Challenge(25-shot)           33.62%       32.59%      3.0457% x
+================================================================
+
+-- Average accuracy drop vs bf16 baseline --
+  cts         : avg drop = -0.6055%  [PASS < 1.0%]
+
+[!] Tasks exceeding 1.0% accuracy loss threshold:
+    cts / mmlu: 1.9770%
+    cts / minerva_math: 9.5238%
+    cts / arc_easy: 2.4752%
+    cts / arc_challenge: 3.0457%

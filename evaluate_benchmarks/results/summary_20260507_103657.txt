@@ -1,0 +1,20 @@
+Evaluation Summary  (2026-05-07 10:36:57)
+
+================================================================
+Task                        bf16_lr1e5max_quant_lr1e5vs bf16_lr1e5 drop
+----------------------------------------------------------------
+MMLU          (5-shot)           43.36%       43.17%      0.4271%  
+GSM8K         (5-shot)            1.59%        1.29%     19.0476% x
+MATH500       (4-shot)            0.50%        0.46%      8.0000% x
+HellaSwag    (10-shot)           41.10%       40.86%      0.5815%  
+ARC-Easy     (25-shot)           51.56%       51.01%      1.0612% x
+ARC-Challenge(25-shot)           36.77%       36.69%      0.2320%  
+================================================================
+
+-- Average accuracy drop vs bf16 baseline --
+  max_quant_lr1e5: avg drop = 4.8916%  [FAIL < 1.0%]
+
+[!] Tasks exceeding 1.0% accuracy loss threshold:
+    max_quant_lr1e5 / gsm8k: 19.0476%
+    max_quant_lr1e5 / minerva_math: 8.0000%
+    max_quant_lr1e5 / arc_easy: 1.0612%

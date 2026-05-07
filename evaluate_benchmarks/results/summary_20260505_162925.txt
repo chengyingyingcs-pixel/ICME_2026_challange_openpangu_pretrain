@@ -1,0 +1,27 @@
+Evaluation Summary  (2026-05-05 16:29:25)
+
+==========================================================================================
+Task                              bf16         cts   max_quant  vs bf16 drop  vs bf16 drop
+------------------------------------------------------------------------------------------
+MMLU          (5-shot)           26.66%       26.13%       26.73%      1.9770% x     -0.2672%  
+GSM8K         (5-shot)            0.38%        0.45%        0.38%    -20.0000%        0.0000%  
+MATH500       (4-shot)            0.42%        0.38%         N/A      9.5238% x           N/A
+HellaSwag    (10-shot)           36.50%       36.74%       36.76%     -0.6548%       -0.7094%  
+ARC-Easy     (25-shot)           42.51%       41.46%       41.33%      2.4752% x      2.7723% x
+ARC-Challenge(25-shot)           33.62%       32.59%       32.51%      3.0457% x      3.2995% x
+==========================================================================================
+
+-- Average accuracy drop vs bf16 baseline --
+  cts         : avg drop = -0.6055%  [PASS < 1.0%]
+  max_quant   : avg drop = 1.0190%  [FAIL < 1.0%]
+
+[!] Tasks exceeding 1.0% accuracy loss threshold:
+    cts / mmlu: 1.9770%
+    cts / minerva_math: 9.5238%
+    cts / arc_easy: 2.4752%
+    max_quant / arc_easy: 2.7723%
+    cts / arc_challenge: 3.0457%
+    max_quant / arc_challenge: 3.2995%
+
+[!] Missing results (run run_eval.sh first):
+    max_quant / minerva_math
