@@ -121,7 +121,7 @@ Benchmarks: MMLU (5-shot), GSM8K (5-shot), MATH500/minerva_math (4-shot), HellaS
 
 ## Hardware
 
-- **GPUs**: 8× NVIDIA H100 80GB
+- **GPUs**: 8× GPU 80GB
 - **Training time**: ~21 hours per run
 - **Framework**: PyTorch 2.6 + torchrun (DDP)
 
